@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="examples">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../src/recursive-directives.css" rel="stylesheet" />
+</head>
+<body ng-controller="exampleController">
+<h2>Recursive Unordered List</h2>
+<p>Outputs a recursive unordered list based on a JSON object structure.</p>
+<p>This is an example of a directive that does recursive compilation at the compile phase.</p>
+<unordered-list ng-model="unorderedList"></unordered-list>
+<h2>Recursive JSON Syntax Highlighter</h2>
+<pretty-json class="pretty-json" json="sampleJson"></pretty-json>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-recursive-compile/src/recursive.js"></script>
+<script src="../src/recursive-directives.js"></script>
+<script>
+    angular.module('examples', ["recursiveDirectives"]);
+
+    angular.module('examples').controller('exampleController', function($scope) {
+        $scope.unorderedList = {
+            'first' : {
+                'a' : {},
+                'b' : {
+                    'c' : {}
+                }
+            },
+            'second' : {
+                'd' : {},
+                'e' : {}
+            },
+            'third' : {}
+        };
+
+        $scope.sampleJson = { "foo" : { "bar" : "baz" }, "isAwesome" : true };
+    });
+</script>
+</body>
+</html>

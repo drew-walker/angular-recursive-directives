@@ -1,0 +1,26 @@
+{
+  "name": "angular-recursive-directives",
+  "version": "0.1.0",
+  "homepage": "https://github.com/drew-walker/angular-recursive-directives",
+  "authors": [
+    "Drew Walker <drew.walker@gmail.com>"
+  ],
+  "description": "A library of recursive angular directives.",
+  "main": "src/index.js",
+  "keywords": [
+    "angular",
+    "recursive",
+    "directives"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-recursive-compile": "~0.2.0"
+  }
+}

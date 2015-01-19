@@ -1,0 +1,7 @@
+.pretty-json { font-family:Courier; font-size:14px; }
+.pretty-json .property { color:Purple; font-weight:bold; }
+.pretty-json .node { margin-left:20px; }
+.pretty-json .string-value { color:green; font-weight:bold; }
+.pretty-json .boolean-value { color:blue; font-weight:bold; }
+.pretty-json a { color:#aaa; text-decoration:none; border:1px solid #aaa; }
+.pretty-json a:hover { color:#000; text-decoration:none; border:1px solid #000; }
